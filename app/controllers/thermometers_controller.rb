@@ -1,16 +1,16 @@
 class ThermometersController < ApplicationController
-  before_action :set_thermometer, only: [:show, :edit, :update, :destroy]
+   before_action :set_thermometer, only: [:show, :edit, :update, :destroy]
 
   # GET /thermometers
   # GET /thermometers.json
   def index
+
     @thermometers = Thermometer.all
   end
 
   # GET /thermometers/1
   # GET /thermometers/1.json
   def show
-    puts params
     @thermometer.make_temp
   end
 
