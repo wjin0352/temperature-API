@@ -11,7 +11,7 @@ class ThermometersController < ApplicationController
   # GET /thermometers/1
   # GET /thermometers/1.json
   def show
-    @thermometer.make_temp
+    # @thermometer.make_temp
   end
 
   # GET /thermometers/new
@@ -27,7 +27,7 @@ class ThermometersController < ApplicationController
   # POST /thermometers.json
   def create
     @thermometer = Thermometer.new(thermometer_params)
-
+    @thermometer.make_temp
     respond_to do |format|
       if @thermometer.save
         format.html { redirect_to @thermometer, notice: 'Thermometer was successfully created.' }
