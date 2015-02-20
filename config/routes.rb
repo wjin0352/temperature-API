@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 #         :as => "api"
 # end
 
-  root to: 'thermometers#index'
+
+  get 'api', to: 'thermometers#temp'
+  root to: 'thermometers#temp'
 end
