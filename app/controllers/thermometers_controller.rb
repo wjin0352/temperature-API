@@ -11,7 +11,7 @@ class ThermometersController < ApplicationController
   # GET /thermometers/1
   # GET /thermometers/1.json
   def show
-    # @thermometer.make_temp
+     # @thermometer.make_temp
   end
 
   # GET /thermometers/new
@@ -33,7 +33,7 @@ class ThermometersController < ApplicationController
         format.html { redirect_to @thermometer, notice: 'Thermometer was successfully created.' }
         format.json { render :show, status: :created, location: @thermometer }
       else
-        format.html { render :new }
+        # format.html { render :new }
         format.json { render json: @thermometer.errors, status: :unprocessable_entity }
       end
     end
