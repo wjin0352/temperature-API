@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
 
   get 'api', to: 'thermometers#temp'
-  root to: 'thermometers#temp'
+  root to: 'thermometers#show'
 end
