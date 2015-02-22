@@ -1,11 +1,11 @@
 class ThermometersController < ApplicationController
    before_action :set_thermometer, only: [ :show, :edit, :update, :destroy]
 
-  # def temp
-  #    # @thermo = Thermometer.new.make_temp.to_json
-  #    @thermometer.make_temp.to_json
-  #
-  # end
+  def temp
+     @thermo = Thermometer.new.make_temp.to_json
+     # @thermometer.make_temp.to_json
+
+  end
 
   # GET /thermometers/1
   # GET /thermometers/1.json
