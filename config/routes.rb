@@ -5,8 +5,7 @@ Rails.application.routes.draw do
 #         :controller => "api",
 #         :as => "api"
 # end
-
-
+  get '/thermometers/1.json',  to: 'thermometers#show'
   get 'api', to: 'thermometers#temp'
-  root to: 'thermometers#temp'
+  # root to: 'thermometers#show'
 end
