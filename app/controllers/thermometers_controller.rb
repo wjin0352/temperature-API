@@ -2,8 +2,8 @@ class ThermometersController < ApplicationController
    before_action :set_thermometer, only: [  :show, :edit, :update, :destroy]
 
   def temp
-     # @thermo = Thermometer.new.make_temp.to_json
-     @thermometer= Thermometer.new
+     # @thermometer = Thermometer.new.make_temp.to_json
+      @thermometer= Thermometer.find(1)
       @thermometer.make_temp.to_json
      # you have to tell it where to render redirect etc since its your own custom action not using rails convention
       render :show
